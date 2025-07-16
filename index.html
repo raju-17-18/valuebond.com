@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Letter From the Heart 💙</title>
+
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+    /* shared card style */
+    .card{
+      width:90%;max-width:800px;background:#ffffffee;padding:2rem;
+      border-radius:20px;box-shadow:0 15px 40px rgba(0,0,0,.15);
+      font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+      animation:fade .8s ease;line-height:1.6;color:#333;margin:auto
+    }
+
+    body{
+      min-height:100vh;display:flex;align-items:center;justify-content:center;
+      background:
+        url("https://i.imgur.com/U1nS8b1.png") repeat,
+        url("https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=60")
+        center/cover no-repeat;background-blend-mode:overlay
+    }
+
+    /* login */
+    .login{max-width:420px;text-align:center}
+    .login h2{color:#6a1b9a;margin-bottom:1rem}
+    .login input,.login button{
+      width:100%;padding:.75rem 1rem;margin:.5rem 0;border-radius:10px;font-size:1rem
+    }
+    .login input{border:1px solid #bbb}
+    .login button{border:none;background:#6a1b9a;color:#fff;cursor:pointer;transition:.2s}
+    .login button:hover{opacity:.85}
+    .error{color:#d32f2f;font-size:.9rem;min-height:18px}
+
+    /* letter */
+    .letter{display:none;white-space:pre-wrap;transform-origin:top;opacity:0}
+    .letter h1{text-align:center;color:#6a1b9a;margin-bottom:1.5rem;font-size:2rem}
+    .footer{text-align:center;margin-top:2rem;font-size:.95rem;color:#555}
+    .heart{color:red}
+
+    @media(max-width:430px){.card{padding:1.2rem}.letter h1{font-size:1.6rem}}
+    @keyframes open{0%{transform:perspective(800px)rotateX(-90deg);opacity:0}
+                    60%{transform:perspective(800px)rotateX(20deg);opacity:.8}
+                    100%{transform:perspective(800px)rotateX(0);opacity:1}}
+    @keyframes fade{from{opacity:0}to{opacity:1}}
+  </style>
+</head>
+
+<body>
+
+  <!-- background music -->
+  <audio id="bgm" autoplay loop muted
+         style="position:fixed;bottom:10px;right:10px;opacity:.7;">
+    <source src="Music.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- login card -->
+  <div class="card login" id="loginBox">
+    <h2>🔒 Enter to Read</h2>
+    <input id="user"   type="text"     placeholder="Username"/>
+    <input id="pass"   type="password" placeholder="Password"/>
+    <button onclick="unlock()">Open Letter 💌</button>
+    <div class="error" id="err"></div>
+  </div>
+
+  <!-- letter -->
+  <div class="card letter" id="letterBox">
+    <h1>💬 Open Letter to You</h1>
+    I know… looks like a novel 😅
+    Pan tho writer ayipoya ra  inka🖊️😂
+    I’m seriously thinking of becoming a writer 📚😂
+    Just read only if/when you’re ready… no pressure 🙏
+    <centre\>
+    <h2>Reyy… ila unnav ra? 💬</h2></centre>
+    <h3\>Time ki thinu ra 😔 assale sannaga avuthunnav 1montn nundi. </h3>
+    Chala rojulu aindi matladi…
+    Na daggara okati cheppali chaala undhi but u have no time so little things cheptunna.
+    Ippudu pedda message anipinchocchu… kani prati word lo nijam undhi ❤️
+    Read cheyyi once, please 🙏
+    
+    idk ra, ippudu nen antha bore kottanah 😔
+    Adhe ah last 4-6months antha baa matladavo tlsaa 
+    laugh chesina moments 😂, long calls ☎️, mutual support 💭 — everything still fresh undhi, even time pattinchokunda calls cheyyadam anni share chesukovatam☎️💭
+    
+    Appudu cheppe prati mata special ga anipinchedhi ✨… ippudu chinna mata adigina kuda nv kopam ga matladuthunnav 😔
+    
+    Nv Annav ga last week ila, nen observe chestunna ninnu, nv kalavalani eh call ni log chestunnav adho okati cheptu, adhentra mari appudu okko roju 6-10hr call unnam ga appudu anipinchaledha? nen call log chestunnatlu🤷‍♂️. 
+    
+    Nen ah roju 4am ki anna mata ‘lover unnadu ani ndhuku cheppaledhu’ e word oka reason avvale nv chesukunnav!!😢  ala vadhilichukovali inka time ki nen ah mood baleka anna inka anthe.
+    
+    Before 3 days cheppinav nak nights call cheyaku ani. Nen ala ayina call chesa nxt day appudu vere call unnav 1am varaku, that hit me hard… inka oka long msg chesa gurthundha snap lo. 
+    Next day Then navvuthu annav guthundha nights blocks chesi mrng unblock ra ani.
+    
+    1st before fight. ofc nundi nen vaccka nik cl cheste 2 times cut chesav ah roju nee health mood baledhu. Nen inka artham chesukunna feeling not well ani.  
+    
+    
+    Nen ah roju 4am ki anna mata ‘lover unnadu ani ndhuku cheppaledhu’ -
+    hurt nunchi vacchina mata ra. Hurt cheyaniki kadhu💔, misunderstanding clear cheyyalaney 😔. Nxt 5min lo sorry cheppina, nuv "headache undhi padukunta" annav…
+    Adhi kuda naku painful ayindhi… nijam ga distant avuthunnav anipinchindhi💭💔.
+    
+     
+    Tarvatha 2–3 days nenu call cheyaledhu weekends…
+    Monday cheste bagane matladav, but cheppav –
+    "Ippatnunchi avaritho matladanu akkuva, nak avaru avasaram ledhu" ani 😣
+    Strong ga cheppav, but lopala nv pain lo unna feeling telisindhi 💭
+    
+    nxt day call chesaa nv mee akka tho ticket booking  lo 5am varaku call unnav.
+    Then nxt day nundi nen cal cheste lift cheyatle inka enni sarlu chesina call ‘on another call’ ane vacchedhi ra
+    
+    Tuesday call chesa nen ofc nundi vacchaka 10ki nv lift just 4min matladuthundagane cut chesav movie chusta but thing nv vere call ki vellipoya. Nv 1st call unnav ra unte oppukoledhu inka last iddharam kalsi movie chestunnam ani. 
+    Again same 9min matladagane prem cl cheste naa cl cut 1hr matladavu inka pecchi ekkindhi ndhuku ala chestundhi . Manaki inka chinna fight ayyindhi then last relax ayyamu. 
+    
+    Nxt day manam teams matladuthunnam suddenga nv bye ani cheppav nen sare anna.
+    Nxt 5min tharvatha whstp call chesav 1min matladi cut chesav mommy ani then 5min  ki cl chesi Even 4min matladina call lo cut chesi, vere cl ki vellipoya ani telisindhi…
+    Nenu call chesthe, ne call cut ayyi vere cl lo 1hr matladav ani choosi, picchi laga feel ayyanu ra 😓
+    
+    Moral of the story nak artham avvatle enti nen 5 -6 months tharvatha bore kottana ala sudden ga vere vallu vaste inka nannu pattinchukodha even cl aduguthe ndhuku ani cheppedhanivi. Inka pscyo ayya. Nen love chese vanne kani neetho appudu hurt cheyaledhu ra before. Nv atleast nannu frnd la chusi matladatle vadu vacchaka ala unte some unknown person tho matladintlu matladuthunnav ra😓.
+    
+    Nuv Saturday matladina nv nee dreams cheppinappudu, nenu chala inspire ayyanu 🤩
+    Proud feel ayyindhi – “Ammayi ante ila undali” ani 🙇‍♂️.  But Na cl cut ayina tharvtha day antha cl  lo busy vachesariki. 
+    
+    aa same night nunchi, block cheyyadam, ignore cheyyadam, long messages, rude words… everything happened.
+    Cl busy ane chusi, inko number nunchi try chesa…
+    Final ga 2am ki lift chesthunte, nenu worst ga matlada ra… 😞
+    Bad luck night… ninnu chala hurt chesa.
+    Na pain ni handle cheyyalekapoyina situation idi 😢
+    Nuv nannu full block chesav… 🚫📱
+    
+    Nak nxt day picchi lesindhi ndhku ala matlada papam chala hurt chesa ra ani😭.
+    
+    Adhaina bond friendship/relationship or any other. Godava ndhuku vacchindho ah thing detailed cheyatamo ledha ah thing vadileste happy undacchu anthe kani ah 
+    Ah topic kosam  enno rojula bond break cheyakudadhu ra. 
+    
+    Kopam or any frustration unte adhi ah topic paine kani nee paina assalu kadhu ra. Ah misunderstanding makes break any bond. Intially it on one topic but it makes lots of distance even it went to fights, tears, blocking in all places even no piece.
+    Naatho matladakudhu anukunnav kadhara...
+    Okasari manam ela unnamo alochinchu ra.
+    Nuvvu inkokarintho matladutunnappudu, nenu picchi la behave chesa…
+    Really sorry ra, I lost myself in that moment
+
+    Nuv Hyd vacchav guthundha ra…
+    Ah roju tired ayyi chair lo padukunnav 😴
+    Nenu pakkana kurchoni chustune undipoyaa …👀
+    Appudu nee face lo peace, calm glow…✨
+    Adhi chala beautiful ga anipinchindhi 💫
+    Aa silence lo kuda charm undhi…
+    Like world motham pause ayyindi ⏳🌌
+
+    3 days nv unna prati roju special laga anipinchindhi 💖
+    Velthappudu manam kalisi 900m nadicham 🚶‍♂️🚶‍♀️
+    Nuv navvuthune… nenu choostune… 😍
+    Adhi oka lifetime moment laga feel avtundhi 🕊️
+
+    Ah roju annanu gurthundhaa ikkade undipovacchu kadha ani nv just smile icchav.
+    Ah time lo nv pakkana unte world lo em ayina easy win avvachu antha baa anipinchidhi ra
+
+    Kani nv return velthunte chala bhadha ga unde lopalo adho teliyanj missing. 
+
+    Nuv turn ayi chethi icchav shakehand…
+    Adhi chinna gesture…But adhe inka 
+    aa touch lo unna warmth…
+    Inka feel avtunnadhi ra. 🤝💙
+
+    Nuv chala beautiful ra…
+    Not just in your smile or your eyes…
+    But in the way nuv laugh chestav…
+    Care chestav… feel chestav… 🥺
+    You don’t even realize how special you are 💖
+    Na view lo…
+    Nuv oka feel, oka vibe, oka emotion.
+    Not just a person… but the reason behind many smiles 💫
+    
+    Ee 1 week lo nuv happy ga matladuthunnava ledho teliyadhu…
+    Kani nenu matram picchi laga feel ayyanu ra…
+    “Nenu oka option ah?” ameki baruvu ayyana ani anipinchi full ga break aipoya 💔
+    Recovery ki chala try chesa…
+    Work lo zero focus, even try chesa vere girls tho matladadam… but nothing helped 😔
+    
+    Finally naa friends nannu motivate chesaru…
+    Bayataki velladam start chesa 🌇
+    Frnd of friends chala members ayyaru vallatho kalisanu, outings, games 🎮, movies 🎬, parties 🍽️ — everything try chesa to not feel alone.
+    Andharam kalisi work chesa, laugh chesa…😄
+    Little relief vachindhi, konchem relax ayyanu
+    
+    Kani lopala… still oka missing undhi — the most important one 💭❤️
+    That’s you ra.
+    Not just as a lover…
+    But as a strong friendship 🤝, a bond I still respect deeply.🙏
+    Nuv malli life lo untav anipiste… even as a friend…
+    It means everything to me. 💫💙
+    
+    Nuv anukovachu… “Ee picchi vadu enti, entha pedda essay pampesadu” ani 😅
+    Maybe even doubt ochundhi — chadavalaa ledhaa ani 📄💭
+    But ra… neeku cheppakapothe lopala undipothundhi anipinchindi 😔
+    Even ippatiki… ninnu chudali ani undhi 👀
+    
+    Ippudu mari antha worst ga lenu,
+    I’m not asking for everything to go back magically ✨
+    Kani atleast oka chance, oka clarity, friendship ayina 🙏
+    
+    Ninnu devatha laga chustha ra 
+    Atleast friendship laa ayina parle… 
+    Adhi jarigithe… nenu eee world lo most happiest person avthanu anipistundhi 💫🥹
+    
+    Hope everything settles and turns good…
+    For both of us 🕊️
+
+    <div style="margin-top: 2rem; text-align: center;">
+        <p style="margin-bottom: .5rem;">🕊️ If you Free to talk or reply,</p>
+        <p style="margin-bottom: 1rem;"><strong>Waiting for your call between 11 PM and 5 AM</strong><br/> leave a message below 💭</p>
+        <a href="https://forms.gle/Lamt55RMs5ZJV9EeA" target="https://forms.gle/Lamt55RMs5ZJV9EeA" style="
+          display: inline-block;
+          background: #6a1b9a;
+          color: #fff;
+          padding: 12px 20px;
+          border-radius: 8px;
+          text-decoration: none;
+          font-weight: bold;
+          transition: 0.2s;
+        " onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">✍️ Leave a Message</a> <br>
+        <p\></p>
+          <a href="https://wa.me/919550316472?text=%2AThanks%20for%20unblocking%E2%80%A6%20it%20actually%20means%20a%20lot%20ra%20%F0%9F%98%8C%E2%9D%A4%EF%B8%8F%2A" target="https://wa.me/919550316472?text=%2AThanks%20for%20unblocking%E2%80%A6%20it%20actually%20means%20a%20lot%20ra%20%F0%9F%98%8C%E2%9D%A4%EF%B8%8F%2A" style="
+          display: inline-block;
+          background: #6a1b9a;
+          color: #fff;
+          padding: 12px 20px;
+          border-radius: 8px;
+          text-decoration: none;
+          font-weight: bold;
+          transition: 0.2s;
+        " onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">Live chat 💭❤ </a>
+
+      If you’re using your office laptop,
+      please click me below to scan & leave a message:<br>
+      <a href="https://raju06072001.github.io/Pic/" target="https://raju06072001.github.io/Pic/" style="
+          display: inline-block;
+          background: #6a1b9a;
+          color: #fff;
+          padding: 4px 10px;
+          border-radius: 8px;
+          text-decoration: none;
+          font-weight: bold;
+          transition: 0.2s;
+        " onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">click me QR </a>
+        
+      </div>
+
+<div class="footer">
+  Sent with 💙<br><span class="heart">— Someone who still cares</span>
+</div>
+  </div>
+
+<script>
+function unlock(){
+  const u=document.getElementById('user').value.trim().toLowerCase(),
+        p=document.getElementById('pass').value.trim().toLowerCase(),
+        err=document.getElementById('err');
+  if(u==='soumya' && p==='sr'){
+    document.getElementById('loginBox').style.display='none';
+    const letter=document.getElementById('letterBox');
+    letter.style.display='block';
+    letter.style.animation='open 1.2s ease-out forwards';
+    /* unmute music on first tap */
+    document.addEventListener('click',()=>{const a=document.getElementById('bgm');
+      if(a.muted){a.muted=false;a.play().catch(()=>{});}},{once:true});
+
+  }else{
+    err.textContent='Incorrect username or password.';
+  }
+}
+</script>
+</body>
+</html>
